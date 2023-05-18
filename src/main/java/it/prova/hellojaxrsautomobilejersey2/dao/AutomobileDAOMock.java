@@ -1,5 +1,6 @@
 package it.prova.hellojaxrsautomobilejersey2.dao;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,9 +13,9 @@ public class AutomobileDAOMock {
 	static {
 		// preparo una lista mock perché ancora non ho il collegamento alla
 		// base dati
-		DB_MOCK.add(new Automobile(1L, "fiat", "panda"));
-		DB_MOCK.add(new Automobile(2L, "opel", "corsa"));
-		DB_MOCK.add(new Automobile(3L, "audi", "A1"));
+		DB_MOCK.add(new Automobile(1L, "fiat", "panda",LocalDate.of(2000, 7, 30)));
+		DB_MOCK.add(new Automobile(2L, "opel", "corsa",LocalDate.of(2010, 9, 2)));
+		DB_MOCK.add(new Automobile(3L, "audi", "A1",LocalDate.of(1998, 5, 21)));
 	}
 
 	public Automobile findById(Long idInput) {
